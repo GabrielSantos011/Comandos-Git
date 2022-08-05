@@ -34,7 +34,7 @@ git log, git log --oneline, git log -p
 ```
 estes são os principais mas pode ser útil olhar o ```git log --help```
 
-OBS: Arquivo .gitignore - para mostrar tudo que o git deve ignorar exemplo
+OBS: Arquivo .gitignore - para mostrar tudo que o git deve ignorar, exemplo:
 ```
 arquivo.ex
 pasta/
@@ -82,9 +82,9 @@ git branch
 git branch <nome branch>
 ```
 
--Para alternar para outra branch
+-Para alternar para outra branch, ou até mesmo para outro commit (por meio do hash)
 ```
-git checkout <branch que deseja ir>
+git checkout <branch que deseja ir/ commit que deseja ir>
 ```
 
 -Para criar uma branch e automáticamente já trocar para ela
@@ -102,4 +102,60 @@ git merge <nome da branch que deseja trazer as alterações>
 (aplica os commits de outra branch na atual)
 ```
 git rebase <branch que deseja trazer os commits>
+```
+
+-Para desfazer uma modificação (fora da staging area)
+```
+git checkout -- <arquivo.ex>
+```
+
+-Para tirar uma modificação da staging area
+```
+git reset HEAD <arquivo.ex>
+```
+
+-Para desfazer um commit
+```
+git revert <hash do commit>
+```
+(o hash pode ser acessado através de um ```git log```)
+
+-Para fazer um stash
+```
+git stash
+```
+
+-Para trazer de volta do stash
+```
+git stash apply
+```
+
+-Para deletar um stash
+```
+git stash drop
+```
+
+-Para trazer de um stash e já apaga-lo
+```
+git stash pop
+```
+
+-Para ver as diferenças das modificações fora da staging area
+```
+git diff
+```
+
+-Para ver as diferenças entre dois commits
+```
+git diff <hash do commit inicial>..<hash do commit final>
+```
+
+-Para criar uma tag
+```
+git tag -a <nome tag> -m "mensagem"
+```
+
+-Para ver as tags disponíveis
+```
+git tag
 ```
