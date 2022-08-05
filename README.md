@@ -72,3 +72,34 @@ caso coloque entre o ```push``` e o ```<nome do servidor>``` o parâmetro ```-u`
 git pull <nome do servidor> <branch>
 ```
 
+-Para ver os branches
+```
+git branch
+```
+
+-Para criar uma nova branch
+```
+git branch <nome branch>
+```
+
+-Para alternar para outra branch
+```
+git checkout <branch que deseja ir>
+```
+
+-Para criar uma branch e automáticamente já trocar para ela
+```
+git checkout -b <nome da branch>
+```
+
+-Para fazer um merge
+(junta os trabalhos e cria um merge commit)
+```
+git merge <nome da branch que deseja trazer as alterações>
+```
+
+-Para fazer um rebase
+(aplica os commits de outra branch na atual)
+```
+git rebase <branch que deseja trazer os commits>
+```
