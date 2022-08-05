@@ -108,6 +108,7 @@ git rebase <branch que deseja trazer os commits>
 ```
 git checkout -- <arquivo.ex>
 ```
+(modificações e não commits iniciais - introduzindo o arquivo)
 
 -Para tirar uma modificação da staging area
 ```
