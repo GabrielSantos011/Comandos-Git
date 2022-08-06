@@ -12,6 +12,7 @@ git config --local user.email "seu@email.aqui"
 ```
 git init
 ```
+caso inicialize um como servidor utilizar o parametro ```--bare``` no final
 
 -Para ver o status do repositório (ver as alterações)
 ```
@@ -44,10 +45,16 @@ pasta/
 ```
 git remote add <nome para o servidor> <caminho>
 ```
+caso seja um caminho de servidor local na máquina recomendavel uso de aspas, ex: "C:/servidor"
 
 -Para alterar o nome do servidor
 ```
 git remote rename <nome antigo> <novo nome>
+```
+
+-Para remover um remote
+```
+git remote rm <nome>
 ```
 
 -Para clonar um repositório
@@ -80,6 +87,11 @@ git branch
 -Para criar uma nova branch
 ```
 git branch <nome branch>
+```
+
+-Para excluir um branch
+```
+git branch -d <nome branch>
 ```
 
 -Para alternar para outra branch, ou até mesmo para outro commit (por meio do hash)
@@ -123,22 +135,35 @@ git revert <hash do commit>
 
 -Para fazer um stash
 ```
-git stash
+git stash -m "mensagem"
+```
+
+-Para trazer lista de stash e seus respectivos id
+```
+git stash list
 ```
 
 -Para trazer de volta do stash
 ```
-git stash apply
+git stash apply <id>
 ```
+caso não coloque o id ele trará o primeiro da pilha (útimo a ser colocado id 0)
 
 -Para deletar um stash
 ```
-git stash drop
+git stash drop <id>
 ```
+caso não coloque o id ele excluirá o primeiro da pilha (útimo a ser colocado id 0)
 
 -Para trazer de um stash e já apaga-lo
 ```
-git stash pop
+git stash pop <id>
+```
+caso não coloque o id ele fará com o primeiro da pilha (útimo a ser colocado id 0)
+
+-Para limpar todos os stashs
+```
+git stash clear
 ```
 
 -Para ver as diferenças das modificações fora da staging area
