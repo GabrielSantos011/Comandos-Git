@@ -185,3 +185,8 @@ git tag -a <nome tag> -m "mensagem"
 ```
 git tag
 ```
+
+-Para enviarmos nossos commits para o servidor
+```
+git push <nome servidor> <nome tag>
+```
