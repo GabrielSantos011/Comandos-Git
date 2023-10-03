@@ -28,10 +28,11 @@ git add <file> or git add .
 ```
 git commit -m "mensagem do commit"
 ```
+Podemos ainda colocar novamente o parâmetro ```-m " descrição" ``` para uma descrição
 
 -Para listagem de commits
 ```
-git log, git log --oneline, git log -p
+git log, git log --oneline, git log -p, git log --grep "palavra chave"
 ```
 estes são os principais mas pode ser útil olhar o ```git log --help```
 
@@ -174,6 +175,11 @@ git diff
 -Para ver as diferenças entre dois commits
 ```
 git diff <hash do commit inicial>..<hash do commit final>
+```
+
+Para ver as alterações feitas em um commit
+```
+git show hash-do-commit
 ```
 
 -Para criar uma tag
