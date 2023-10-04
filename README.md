@@ -128,11 +128,16 @@ git checkout -- <arquivo.ex>
 git reset HEAD <arquivo.ex>
 ```
 
--Para desfazer um commit
+-Para desfazer um commit (faz um commit novo revertendo)
 ```
 git revert <hash do commit>
 ```
 (o hash pode ser acessado através de um ```git log```)
+
+-Para desfazer um commit (voltando para o estado de um commit sem rastros)
+```
+git reset --hard [hash do commit que deseja voltar]
+```
 
 -Para fazer um stash
 ```
@@ -192,7 +197,12 @@ git tag -a <nome tag> -m "mensagem"
 git tag
 ```
 
--Para enviarmos nossos commits para o servidor
+-Para enviarmos nossas tags para o servidor
 ```
 git push <nome servidor> <nome tag>
+```
+
+-Para ver um histórico completo de logs, inclusive de commits deletados
+```
+git reflog
 ```
