@@ -202,7 +202,7 @@ git tag
 git push <nome servidor> <nome tag>
 ```
 
--Para ver um histórico completo de logs, inclusive de commits deletados
+-Para ver um histórico completo de logs, inclusive de commits deletados (funciona localmente)
 ```
 git reflog
 ```
